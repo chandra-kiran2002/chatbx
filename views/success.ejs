@@ -1,0 +1,21 @@
+
+<style>
+    .content {
+  max-width: 800px;
+  margin: auto;
+}
+</style>
+<div class="content">
+    <h1 >hello <%= name %>(please refresh the page for new messages)</h1>
+    <form action="/success/<%= name %>" method="POST">
+        <label>enter name of the person to send text</label><br><br>
+        <input type="text" name="person"><br><br>
+        <label>message</label><br><br>
+        <input type="text" name="message"><br><br>
+        <button type="submit">Send</button><br>
+    </form>
+    <% for(var i=0;i<array.length;i++){ %>
+        <p>From    : <%= array[i][0] %></p>
+        <p>message : <%= array[i][1] %></p>
+    <% } %>
+</div>
